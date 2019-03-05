@@ -1,0 +1,58 @@
+# Supported type: Package, Class, Method
+# Supported level: INFO, WARN, DANGER, DISASTER, LASTDAY
+
+# Java
+[[rules]]
+type = "METHOD"
+level = "DANGER"
+message = "Exec"
+class = "java.lang.Runtime"
+method = "exec"
+
+[[rules]]
+type = "METHOD"
+level = "WARN"
+message = "Delete File."
+class = "java.io.File"
+method = "delete"
+
+[[rules]]
+type = "METHOD"
+level = "WARN"
+message = "Delete File."
+class = "java.io.File"
+method = "deleteOnExit"
+
+# [[rules]]
+# type = "CLASS"
+# level = "INFO"
+# message = "URL"
+# classes = ["java.net.URL"]
+
+[[rules]]
+type = "CLASS"
+level = "INFO"
+message = "URL Connection"
+classes = ["java.net.URLConnection"]
+
+# Bukkit
+[[rules]]
+type = "METHOD"
+level = "DISASTER"
+message = "Give Op."
+class = "org.bukkit.permissions.ServerOperator"
+method = "setOp"
+
+[[rules]]
+type = "METHOD"
+level = "DISASTER"
+message = "Give Op."
+class = "org.bukkit.permissions.PermissibleBase"
+method = "setOp"
+
+[[rules]]
+type = "METHOD"
+level = "DISASTER"
+message = "Give Op."
+class = "org.bukkit.entity.HumanEntity"
+method = "setGameMode"
